@@ -1,4 +1,10 @@
 wget https://v1.paradisehill.cc/video/sugkdnsch6i_1_part1.mp4
+
+curl -X POST https://content.dropboxapi.com/2/files/upload \
+    --header "Authorization: Bearer: sl.AzbyhbPSBZtu3B_WpZbI4UhnA6iSqU8h32cj8nIAQGGZrrp7vR84bDi5N33ATtkTappyVBOvsKiTPB7n1Q1VSMWfiYD7010jvEqtzyB6LugptLcadXmQ7Q-bzqayarW7qQmG-j4" \
+    --header "Dropbox-API-Arg: {\"path\": \"sugkdnsch6i_1_part1.mp4\" \
+    --header "Content-Type: application/octet-stream" \
+    --data-binary @sugkdnsch6i_1_part1.mp4
 wget https://v1.paradisehill.cc/video/sugkdnsch6i_2_part1.mp4
 wget https://v1.paradisehill.cc/video/sugkdnsch6i_3_part1.mp4
 wget https://v1.paradisehill.cc/video/sugkdnsch6i_4_part1.mp4
