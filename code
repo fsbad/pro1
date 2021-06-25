@@ -1,0 +1,15 @@
+urls=$(cat urls)
+
+function upload {
+curl -X POST https://content.dropboxapi.com/2/files/upload\
+    --header "Authorization: Bearer: sl.AzbyhbPSBZtu3B_WpZbI4UhnA6iSqU8h32cj8nIAQGGZrrp7vR84bDi5N33ATtkTappyVBOvsKiTPB7n1Q1VSMWfiYD7010jvEqtzyB6LugptLcadXmQ7Q-bzqayarW7qQmG-j4" \
+    --header "Dropbox-API-Arg: {\"path\": \"$1\"} "\
+    --header "Content-Type: application/octet-stream" \
+    --data-binary @$1
+}
+
+for url in $urls; do 
+    file="${url##*/}" ;
+    wget $url -O $file;
+    upload $file;
+    done
